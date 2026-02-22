@@ -75,6 +75,8 @@ inventory_optimization_project/
 ├── main_script.py
 └── README.md
 
+**NOTE: PROJECT 4 HAS 2 VERSIONS ONE CREATING A DETAILED REPORT WITH DIFFERENT FILES AND THE SECOND VERSION CREATED A DASHBOARD**
+
 Project 1: NASA Social Media Sentiment Analysis
 Advanced NLP & Machine Learning Project
 

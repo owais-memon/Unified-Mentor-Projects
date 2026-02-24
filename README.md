@@ -8,12 +8,12 @@ Each project follows a structured ML pipeline:
 4) Evaluation & Interpretation
 5) Insights & Business Impact
 
-Project 1 : NASA-Sentiment-Analysis/
+Project 1 :Climate-Change-Modeling/
 │
-├── nasa_comments.csv
-├── advanced_nasa_sentiment_analysis.csv
-├── sentiment_analysis.ipynb
+├── climate_model.py
+├── climate_data.csv
 ├── README.md
+└── outputs/
 
 Project 2 : advanced-healthcare-recommendation/
 │
@@ -75,99 +75,66 @@ inventory_optimization_project/
 ├── main_script.py
 └── README.md
 
+Project 5: NASA-Sentiment-Analysis/
+│
+├── nasa_comments.csv
+├── advanced_nasa_sentiment_analysis.csv
+├── sentiment_analysis.ipynb
+├── README.md
 **NOTE: PROJECT 4 HAS 2 VERSIONS ONE CREATING A DETAILED REPORT WITH DIFFERENT FILES AND THE SECOND VERSION CREATED A DASHBOARD**
 
-Project 1: NASA Social Media Sentiment Analysis
-Advanced NLP & Machine Learning Project
+Project 1:Climate Change Modeling using Machine Learning
+Project Overview
+This project focuses on building a Climate Change Prediction Model using Machine Learning techniques.
+The objective is to analyze historical climate data and predict future climate-related indicators using regression modeling.
+The model is trained on numerical climate variables such as temperature, CO₂ levels, rainfall, or other environmental indicators and evaluates performance using standard regression metrics.
 
- Project Overview:This project performs advanced Natural Language Processing (NLP) and Machine Learning analysis on NASA social media comments. The goal is to analyze public sentiment, extract discussion topics, and correlate engagement metrics (likes and comments) with sentiment trends.
-
-The project combines:
-Rule-based sentiment analysis (VADER)
-Machine Learning classification (TF-IDF + Logistic Regression)
-Topic modeling (LDA)
-Time-series sentiment trends
-Engagement analysis using likes and comment counts
-
-This project demonstrates real-world data science workflow from preprocessing to model evaluation and insight extraction.
+Problem Statement
+Climate change is one of the most critical global challenges. Accurate modeling and prediction of climate indicators help in:
+Understanding long-term environmental trends
+Forecasting temperature variations
+Supporting environmental policy decisions
+Assisting research and sustainability planning
+This project builds a regression-based predictive model to estimate a target climate variable from historical data.
 
 Dataset Description
+The dataset used in this project contains numerical climate-related features such as:
+Environmental indicators (temperature, CO₂ levels, etc.)
+Time-related or measurement features
+A target variable (last column in dataset)
+The model automatically selects the last numeric column as the prediction target.
 
-The dataset contains the following columns:
-date – Date of the comment
-likesCount – Number of likes received
-profileName – User name
-commentsCount – Number of replies
-text – Actual comment text
+Technologies Used: Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 
-Project Objectives:
-Perform advanced text preprocessing and cleaning
-Conduct rule-based sentiment analysis using VADER
-Train a supervised ML sentiment classifier
-Extract hidden discussion themes using LDA topic modeling
-Analyze sentiment trends over time
-Study engagement metrics (likes/comments) vs sentiment
+Machine Learning Approach
+The project follows a complete machine learning pipeline:
 
-⚙️ Technologies Used
-Python
-Pandas
-NumPy
-NLTK
-Scikit-learn
-Matplotlib
-Seaborn
-WordCloud
+1️⃣ Data Loading
+Dataset loaded using Pandas
+2️⃣ Data Cleaning
+Selection of numeric columns
+Removal of missing values
+3️⃣ Feature Selection
+Last column selected as target variable
+Remaining columns used as input features
+4️⃣ Train-Test Split
+80% training data
+20% testing data
+5️⃣ Model Training
+Linear Regression model used
+6️⃣ Model Evaluation
+Performance measured using:
+Mean Absolute Error (MAE)
+Mean Squared Error (MSE)
+R² Score
+7️⃣ Visualization
+Actual vs Predicted value scatter plot
 
-🔬 Project Workflow
-1️⃣ Data Cleaning
-Lowercasing
-Removing URLs, mentions, hashtags
-Stopword removal
-Lemmatization
-
-2️⃣ Sentiment Analysis
-VADER sentiment scoring
-Classification into:
-Positive - Neutral - Negative
-
-3️⃣ Machine Learning Model
-TF-IDF vectorization
-Logistic Regression classifier
-Train-test split
-Model evaluation (Accuracy, Precision, Recall, F1-score)
-
-4️⃣ Topic Modeling
-CountVectorizer
-Latent Dirichlet Allocation (LDA)
-Extraction of top keywords per topic
-
-5️⃣ Engagement Analysis
-Sentiment vs Likes
-Sentiment vs Comment volume
-
-6️⃣ Time Series Analysis
-Monthly sentiment trend visualization
-
-📊 Model Performance
-The Logistic Regression model is trained on TF-IDF features and evaluated using:
-Accuracy Score, Confusion Matrix, Classification Report
-
-📈 Key Insights
-Public sentiment towards NASA is predominantly positive.
-High-engagement comments often correlate with emotionally strong sentiment.
-Topic modeling reveals recurring themes around missions, space exploration, and scientific achievements.
-Sentiment trends vary across months depending on major events.
-
-📷 Visualizations Included
-
-Sentiment Distribution Plot
-WordCloud of frequent terms:
-Confusion Matrix
-Topic Modeling output
-Sentiment trend over time
-Engagement comparison charts
-
-
+ Evaluation Metrics
+The model performance is evaluated using:
+MAE (Mean Absolute Error) – Average prediction error
+MSE (Mean Squared Error) – Squared error magnitude
+R² Score – Model explanatory power
 
 Project 2 :Advanced Personalized Healthcare Recommendation System
 Overview
@@ -425,3 +392,94 @@ Top risk products
 Risk score visualization
 
 Tech Stack: Python, Pandas, NumPy, Scikit-learn, SciPy, Matplotlib / Seaborn, Plotly, SQLite
+
+Project 5:  NASA Social Media Sentiment Analysis
+Advanced NLP & Machine Learning Project
+
+ Project Overview:This project performs advanced Natural Language Processing (NLP) and Machine Learning analysis on NASA social media comments. The goal is to analyze public sentiment, extract discussion topics, and correlate engagement metrics (likes and comments) with sentiment trends.
+
+The project combines:
+Rule-based sentiment analysis (VADER)
+Machine Learning classification (TF-IDF + Logistic Regression)
+Topic modeling (LDA)
+Time-series sentiment trends
+Engagement analysis using likes and comment counts
+
+This project demonstrates real-world data science workflow from preprocessing to model evaluation and insight extraction.
+
+Dataset Description
+
+The dataset contains the following columns:
+date – Date of the comment
+likesCount – Number of likes received
+profileName – User name
+commentsCount – Number of replies
+text – Actual comment text
+
+Project Objectives:
+Perform advanced text preprocessing and cleaning
+Conduct rule-based sentiment analysis using VADER
+Train a supervised ML sentiment classifier
+Extract hidden discussion themes using LDA topic modeling
+Analyze sentiment trends over time
+Study engagement metrics (likes/comments) vs sentiment
+
+⚙️ Technologies Used
+Python
+Pandas
+NumPy
+NLTK
+Scikit-learn
+Matplotlib
+Seaborn
+WordCloud
+
+🔬 Project Workflow
+1️⃣ Data Cleaning
+Lowercasing
+Removing URLs, mentions, hashtags
+Stopword removal
+Lemmatization
+
+2️⃣ Sentiment Analysis
+VADER sentiment scoring
+Classification into:
+Positive - Neutral - Negative
+
+3️⃣ Machine Learning Model
+TF-IDF vectorization
+Logistic Regression classifier
+Train-test split
+Model evaluation (Accuracy, Precision, Recall, F1-score)
+
+4️⃣ Topic Modeling
+CountVectorizer
+Latent Dirichlet Allocation (LDA)
+Extraction of top keywords per topic
+
+5️⃣ Engagement Analysis
+Sentiment vs Likes
+Sentiment vs Comment volume
+
+6️⃣ Time Series Analysis
+Monthly sentiment trend visualization
+
+📊 Model Performance
+The Logistic Regression model is trained on TF-IDF features and evaluated using:
+Accuracy Score, Confusion Matrix, Classification Report
+
+📈 Key Insights
+Public sentiment towards NASA is predominantly positive.
+High-engagement comments often correlate with emotionally strong sentiment.
+Topic modeling reveals recurring themes around missions, space exploration, and scientific achievements.
+Sentiment trends vary across months depending on major events.
+
+📷 Visualizations Included
+
+Sentiment Distribution Plot
+WordCloud of frequent terms:
+Confusion Matrix
+Topic Modeling output
+Sentiment trend over time
+Engagement comparison charts
+
